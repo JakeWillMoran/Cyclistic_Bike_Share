@@ -10,4 +10,7 @@ Moreno has set a clear goal: Design marketing strategies aimed at **converting c
 
 \* *Cyclistic Bike Share is a fictional company, and all associated data has been produced by Google, through the 'Google Data Analytics Professional Certificate'. The use of this data and subsequent analysis is to serve as an exercise for data analysis.* \*
 
-## How do annual members and casual riders use Cyclistic bikes differently?
+## The Data
+`12 raw data files` have been provied: one for each month in 2023. 
+
+Within each dataset we have a `ride_id` (*each individual ride has a unique ride ID*), the `rideable_type` used (*classic or electric bikes*), the `start_time` and `end_time` of each ride, the start and end locations of each ride (*stations, latitude, and longitude*), and the associated type of user: `member_casual`.
