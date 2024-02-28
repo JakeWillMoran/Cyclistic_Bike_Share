@@ -1,4 +1,4 @@
-# <p align="center">Cyclistic Bike Share</p>
+# Cyclistic Bike Share
 ### <ins>About Cyclistic</ins>
 
 Cyclistic is a **bike-share program** based in **Chicago (US)** that features more than 5,800 bicycles and 600 docking stations. 
@@ -9,10 +9,12 @@ Cyclistic’s finance analysts have concluded that **annual members are much mor
 
 Moreno has set a clear goal: Design marketing strategies aimed at **converting casual riders into annual members**. In order to do that, however, the team needs to better understand how annual members and casual riders differ, why casual riders would buy a membership, and how digital media could affect their marketing tactics. Moreno and her team are interested in analyzing the Cyclistic historical bike trip data to identify trends.
 
-\* *Cyclistic Bike Share is a fictional company, and all associated data has been produced by Google, through the [Google Data Analytics Professional Certificate]([https://www.google.com](https://www.coursera.org/professional-certificates/google-data-analytics)). The use of this data and subsequent analysis is to serve as an exercise for data analysis. <ins>Moreover, the purpose of this project isn't to display perfect analysis, but to highlight my analytical and technical skills, and my logical way of thinking</ins>* \*
+\* *Cyclistic Bike Share is a fictional company, and all associated data has been produced by Google, through the [Google Data Analytics Professional Certificate](https://www.coursera.org/professional-certificates/google-data-analytics). The use of this data and subsequent analysis is to serve as an exercise for data analysis. <ins>Moreover, the purpose of this project isn't to display perfect analysis, but to highlight my analytical and technical skills, and my logical way of thinking</ins>* \* 
 
-### <ins>The Goal</ins> 
-#### Uncover trends in bike use between members and casual riders, and propose marketing strategies. 
+# The Task 
+#### 1. How do annual members and casual riders use Cyclistic bikes differently?
+#### 2. Why would casual riders buy Cyclistic annual memberships?
+#### 3. How can Cyclistic use digital media to influence casual riders to become members?
 
 # Preparation
 `12 raw data files` were provied: one for each month in 2023. 
@@ -72,7 +74,31 @@ This created a new table that now included the additional following variables: `
 *The `WHERE`, `DATETIME_DIFF` and `OR` queries at the end excluded any rows in which the start and end timestamps were the same, or where the start time was greater than the end time (impossible and therefore invalid)*
 
 # Results/findings
-
+\* *All visuals were produced using `Tableau`* \*
 ### Key findings
+#### 1. Members took significantly more rides than casual users in 2023. <br />
+<img src="https://github.com/JakeWillMoran/Cyclistic_Bike_Share/assets/161477623/b1ec4285-b43d-4a39-b52b-a8a13c3b24c7" width=40% height=40%> <br />
+
+#### 2. The total number of rides for members peaked in August whereas the total number of rides for casual riders peaked in July. <br />
+![Monthly number of rides in 2023 ](https://github.com/JakeWillMoran/Cyclistic_Bike_Share/assets/161477623/9c276ae9-c762-48f3-9c44-c14b11a15a26) <br />
+
+#### 3. The total number of rides for members was higher throughout the working week whereas the total number of rides for casual riders was higher on the weekend <br />
+![Number of rides per day of the week in 2023](https://github.com/JakeWillMoran/Cyclistic_Bike_Share/assets/161477623/03d3e354-e5eb-400c-8c5f-1c7209b10df6)
+
+#### 4. Casual riders number of rides steadily rose from 5am to 5pm whereas members number of rides had peaks at 8am and 8pm <br />
+![Hourly number of rides in 2023](https://github.com/JakeWillMoran/Cyclistic_Bike_Share/assets/161477623/819e2c85-f084-49f9-996e-56aaa402c5af)
+
+#### 5. On average, casual riders had significantly longer ride times compared to members <br />
+<img src= "https://github.com/JakeWillMoran/Cyclistic_Bike_Share/assets/161477623/6ff7779e-fec8-4fa3-8d76-9b9132f99667)" width=40% height=40%> <br />
+
+#### 6. Whereas members average ride time stayed relatively consistent throughout the year, rising slightly into the summer months; casual riders had a drop in March and a steeper incline into the summer months <br />
+![Monthly average ride time in 2023 ](https://github.com/JakeWillMoran/Cyclistic_Bike_Share/assets/161477623/51e970ad-7423-4ae7-9fe4-9c050265845c)
+
+#### 7. Casual riders relatively had a greater average ride time on the weekend
+![Average ride time per day fo the week in 2023 ](https://github.com/JakeWillMoran/Cyclistic_Bike_Share/assets/161477623/81643d10-b0fb-4b1a-a958-ccafcccb90d3)
+
+#### 8. There was no clear trend with average ride time per hour of the day. Casual rider data appears anomolous. 
+![Hourly average ride time in 2023 ](https://github.com/JakeWillMoran/Cyclistic_Bike_Share/assets/161477623/7a0e938a-9f87-41f7-8ffa-e317f4f1fa90)
+
 
 
