@@ -13,4 +13,18 @@ Moreno has set a clear goal: Design marketing strategies aimed at **converting c
 ## The Data
 `12 raw data files` have been provied: one for each month in 2023. 
 
-Within each dataset we have a `ride_id` (*each individual ride has a unique ride ID*), the `rideable_type` used (*classic or electric bikes*), the `start_time` and `end_time` of each ride, the start and end locations of each ride (*stations, latitude, and longitude*), and the associated type of user: `member_casual`.
+Within each dataset we have a `ride_id` (*each individual ride has a unique ride ID*), the `rideable_type` used (*classic or electric bikes*), the `start_time` and `end_time` of each ride, the start and end locations of each ride: `start_station_name`, `start_station_id`, `end_station_name`, `end_station_id`, `start_lat`, `start_lng`, `end_lat`, `end_lng`, and the associated type of user: `member_casual`.
+
+### Cleaning the data
+The first thing I did was transform the data and make sure it was clean. I decided to use `SQL` (*Bigquery*) at this step, however later on I will utilize `R` also. 
+
+Using the `UNION ALL` function in SQL, I merged all 12 tables into 1, containing approximately 5.5 million rows. This table will remain untouched and serve as my raw data file.
+
+From here I can start studying the table and look for any anomolies, mistakes, and/or missing values:
+#### Checkign for duplicate ride ID's
+Since each individual ride has its own unique ID, there shouldn't be any duplicates. Using SQL, I didn't find any duplicates: Click 'more info' below to see how I did this.
+<details>
+<summary>More info</summary>
+<br>
+Using `SELECT COUNT(DISTINCT(ride_id))` to return the number of unique values, and `SELECT COUNT(ride_id)` to return the total number of values, I can see if there is a difference. As both values were the same, I knew that each ride_id was unique.
+</details>
