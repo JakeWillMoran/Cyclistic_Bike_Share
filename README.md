@@ -12,9 +12,7 @@ Moreno has set a clear goal: Design marketing strategies aimed at **converting c
 \* *Cyclistic Bike Share is a fictional company, and all associated data has been produced by Google, through the 'Google Data Analytics Professional Certificate'. The use of this data and subsequent analysis is to serve as an exercise for data analysis.* \*
 
 ### <ins>The Goal</ins> 
-#### Uncover trends in bike use between members and casual riders, and propose marketing strategies.
-
-
+#### Uncover trends in bike use between members and casual riders, and propose marketing strategies. 
 
 ## <p align="center">The Data
 `12 raw data files` have been provied: one for each month in 2023. 
@@ -26,7 +24,7 @@ The first thing I did was transform the data and make sure it was clean. I decid
 
 Using the `CREATE TABLE` and `UNION ALL` functions in SQL, I merged all 12 tables into 1, containing approximately 5.5 million rows. This table will remain untouched so to speak, and serve as my raw data file.
 
-From here I can start studying the table and look for any anomolies, duplicates, and/or missing values:
+From here I can start studying the data and look for any anomolies, duplicates, and/or missing values:
 #### 1. Checking for duplicates
 Since each individual ride has its own unique ID, there shouldn't be any duplicates. In SQL, I used `COUNT(DISTINCT(ride_id))` to return the total number of unique ride IDs, and then running `COUNT(ride_id)` I could see the overall total number of IDs. As both values were the same, I knew that each ride ID was unique and therefore, there were no duplicates :heavy_check_mark:
 
