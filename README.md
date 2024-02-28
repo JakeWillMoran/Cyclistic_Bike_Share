@@ -9,7 +9,7 @@ Cyclistic’s finance analysts have concluded that **annual members are much mor
 
 Moreno has set a clear goal: Design marketing strategies aimed at **converting casual riders into annual members**. In order to do that, however, the team needs to better understand how annual members and casual riders differ, why casual riders would buy a membership, and how digital media could affect their marketing tactics. Moreno and her team are interested in analyzing the Cyclistic historical bike trip data to identify trends.
 
-\* *Cyclistic Bike Share is a fictional company, and all associated data has been produced by Google, through the 'Google Data Analytics Professional Certificate'. The use of this data and subsequent analysis is to serve as an exercise for data analysis. <ins>Moreover, the purpose of this project isn't to display perfect analysis, but to highlight my analytical and technical skills, and my logical way of thinking</ins>* \*
+\* *Cyclistic Bike Share is a fictional company, and all associated data has been produced by Google, through the [Google Data Analytics Professional Certificate]([https://www.google.com](https://www.coursera.org/professional-certificates/google-data-analytics)). The use of this data and subsequent analysis is to serve as an exercise for data analysis. <ins>Moreover, the purpose of this project isn't to display perfect analysis, but to highlight my analytical and technical skills, and my logical way of thinking</ins>* \*
 
 ### <ins>The Goal</ins> 
 #### Uncover trends in bike use between members and casual riders, and propose marketing strategies. 
@@ -43,16 +43,36 @@ I then looked at the length of the time related variables, to make sure they wer
 
 ### <ins>Transforming the data</ins>
 As my data was now clean, I could transform the table into a format that would allow for a more efficient and effective analysis. I input the following query:
-_______________________________________________________________________
-`CREATE TABLE "new_table_name" AS`<br />
 
-`SELECT`<br /> `ride_id`,<br /> `rideable_type`,<br /> `started_at`,<br /> `ended_at`,<br /> `EXTRACT(DATE FROM started_at) AS date`,<br /> `EXTRACT(MONTH FROM started_at) AS month`,<br /> `EXTRACT(TIME FROM started_at) AS start_time`,<br /> `FORMAT_DATE('%A', DATE(started_at)) AS day_of_week`,<br /> `DATETIME_DIFF(ended_at, started_at, SECOND) AS ride_time`,<br /> `start_lat`,<br /> `start_lng`,<br /> `end_lat`,<br /> `end_lng`,<br /> `member_casual`<br />   
-`FROM "table_name"` <br />
-`WHERE` `DATETIME_DIFF(ended_at, started_at, MINUTE)!=0` <br /> 
-`OR` `DATETIME_DIFF(ended_at, started_at, MINUTE)>0` 
-_______________________________________________________________________
+```sql
+CREATE TABLE "new_table_name" AS
+
+SELECT 
+ride_id,
+rideable_type,
+started_at,
+ended_at,
+EXTRACT(DATE FROM started_at) AS date, 
+EXTRACT(MONTH FROM started_at) AS month,
+EXTRACT(TIME FROM started_at) AS start_time,
+FORMAT_DATE('%A', DATE(started_at)) AS day_of_week, 
+DATETIME_DIFF(ended_at, started_at, SECOND) AS ride_time,
+start_lat, 
+start_lng,
+end_lat,
+end_lng,
+member_casual 
+
+FROM "table_name"
+WHERE DATETIME_DIFF(ended_at, started_at, MINUTE)!=0 
+  AND DATETIME_DIFF(ended_at, started_at, MINUTE)>0
+```
+
 This created a new table that now included the additional following variables: `date`, `month`, `day_of_the_week`, and `ride_time`. <br />
 *The `WHERE`, `DATETIME_DIFF` and `OR` queries at the end excluded any rows in which the start and end timestamps were the same, or where the start time was greater than the end time (impossible and therefore invalid)*
 
-# Analysis Results
-For the analysis and supportinf visualisation I used Tableau.
+# Results/findings
+
+### Key findings
+
+
