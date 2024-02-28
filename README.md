@@ -14,14 +14,16 @@ Moreno has set a clear goal: Design marketing strategies aimed at **converting c
 ### <ins>The Goal</ins> 
 #### Uncover trends in bike use between members and casual riders, and propose marketing strategies. 
 
-## The Data
-`12 raw data files` have been provied: one for each month in 2023. 
+# Preparation
+`12 raw data files` were provied: one for each month in 2023. 
 
-Within each dataset we have a `ride_id` (*each individual ride has a unique ride ID*), the `rideable_type` used (*classic or electric bikes*), the `start_time` and `end_time` of each ride, the start and end locations of each ride: `start_station_name`, `start_station_id`, `end_station_name`, `end_station_id`, `start_lat`, `start_lng`, `end_lat`, `end_lng`, and the associated type of user: `member_casual`.
+Within each dataset we have the following variables: `ride_id` (*each individual ride has a unique ride ID*), the `rideable_type` used (*classic or electric bikes*), the `started_at` and `ended_at` timestamp of each ride, the start and end locations of each ride: `start_station_name`, `start_station_id`, `end_station_name`, `end_station_id`, `start_lat`, `start_lng`, `end_lat`, `end_lng`, and the associated type of user: `member_casual`.
 
 ### <ins>Cleaning the data</ins>
 
-My first step in the process was merging all 12 data files into 1 table so that I could begin cleaning the data; I decided to use `SQL` (*Bigquery*) at this stage. Using the `CREATE TABLE` and `UNION ALL` functions in SQL, I merged all 12 tables into 1, containing approximately 5.5 million rows. This table will remain untouched so to speak, and serve as my raw data file.
+My first step in the process was merging all 12 data files into 1 table so that I could begin cleaning the data; I decided to use `SQL` (*Bigquery*) at this stage. 
+
+Using the `CREATE TABLE` and `UNION ALL` functions in SQL, I merged all 12 tables into 1, containing approximately 5.5 million rows. This table will remain untouched so to speak, and serve as my raw data file.
 
 From here I can start studying the data and look for any anomolies, duplicates, and/or missing values:
 #### 1. Checking for duplicates :heavy_check_mark:
@@ -49,5 +51,8 @@ _______________________________________________________________________
 `WHERE` `DATETIME_DIFF(ended_at, started_at, MINUTE)!=0` <br /> 
 `OR` `DATETIME_DIFF(ended_at, started_at, MINUTE)>0` 
 _______________________________________________________________________
-This created a new table, that now also included the following variables: `date`, `month`, `day_of_the_week`, and `ride_time`. <br />
-*The `WHERE` and `AND` queries at the end excluded any rows in which the start and end timestamps were the same, or where the start time was greater than the end time (impossible and therefore invalid)*
+This created a new table that now included the additional following variables: `date`, `month`, `day_of_the_week`, and `ride_time`. <br />
+*The `WHERE`, `DATETIME_DIFF` and `OR` queries at the end excluded any rows in which the start and end timestamps were the same, or where the start time was greater than the end time (impossible and therefore invalid)*
+
+# Analysis Results
+For the analysis and supportinf visualisation I used Tableau.
