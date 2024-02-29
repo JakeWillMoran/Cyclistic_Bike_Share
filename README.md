@@ -76,7 +76,7 @@ This created a new table that now included the additional following variables: `
 
 # Results/findings
 \* *All visuals were produced using `Tableau`* \*
-### General results & discussion
+### General results
 - ##### Members took significantly more rides than casual users in 2023 whereas on average, casual riders had significantly longer ride times compared to members. <br />
 
 Total number of rides      |  Average ride time
