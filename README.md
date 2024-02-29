@@ -12,12 +12,11 @@ Moreno has set a clear goal: Design marketing strategies aimed at **converting c
 
 \* *Cyclistic Bike Share is a fictional company, and all associated data has been produced by Google, through the [Google Data Analytics Professional Certificate](https://www.coursera.org/professional-certificates/google-data-analytics). The use of this data and subsequent analysis is to serve as an exercise for data analysis. <ins>Moreover, the purpose of this project isn't to display perfect analysis, but to highlight my analytical and technical skills.</ins>* \* 
 
-### <ins>The Task </ins>
-**1. How do annual members and casual riders use Cyclistic bikes differently?** </br >
-**2. Why would casual riders buy Cyclistic annual memberships?** </br >
-**3. How can Cyclistic use digital media to influence casual riders to become members?**
+### <ins>The Task</ins>
+**`1` Analyse how annual members and casual riders use Cyclistic bikes differently** </br >
+**`2` Recommend how Cyclistic could use digital media to influence casual riders to become members**
 
-# Preparation
+## The Process
 `12 raw data files` were provied: one for each month in 2023. 
 
 Within each dataset we have the following variables: `ride_id` (*each individual ride has a unique ride ID*), the `rideable_type` used (*classic or electric bikes*), the `started_at` and `ended_at` timestamp of each ride, the start and end locations of each ride: `start_station_name`, `start_station_id`, `end_station_name`, `end_station_id`, `start_lat`, `start_lng`, `end_lat`, `end_lng`, and the associated type of user: `member_casual`.
@@ -131,10 +130,7 @@ Total number of rides (Members)     |  Average ride time (Members)
 - Annual members use Cyclistic bikes more often throughout the working week and at common working hours, whereas casual riders use Cyclistic bikes more in the summer months and at the weekend.
 - Both groups ride electric bikes more often than classic bikes however casual riders on average ride classic bikes for longer periods of time (230% greater average ride time compared to members).</br>
 
-**2. Why would casual riders buy Cyclistic annual memberships?**
-- I believe we need more data to answer this quesiton. The main reason casual riders would become members is to save money or possibly the convenience of not having the purchase day passes, however this is dependent on their individual frequency of use and other user specific data, of which we don't currently have. </br >
-
-**3. How can Cyclistic use digital media to influence casual riders to become members?**
+**2. How can Cyclistic use digital media to influence casual riders to become members?**
 - As it appears that casual riders are typically using Cyclistic for leisure, this should be one primary focus in terms how to influence casual riders to become members. For example, we could increase the advertising of Cyclistic as a bike share company that provides bikes for enjoyment and relaxation, alongside the benefits of becoming a member. On top of this, classic bikes should be a main focus in these efforts, as casual riders spend significantly longer periods of time on classic bikes (*on average*).
 - Alternatively, casual riders may not have thought to use Cyclistic bikes for commuting to and from work, or are unaware of the money they would save by becoming members (*dependant on an individual's bike use*). Evidently, from the member data we have observed, members appear to use the Cyclistic primarily for this purpose. We could therefore also advertsie the diverse uses of Cyclistic to casual riders along side the money they may save by using Cyclistic to commute to and from work.
 - Overall I believe we need more user specific data to be able to advertise effectively to the right audience.
