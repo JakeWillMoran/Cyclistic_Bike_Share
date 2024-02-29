@@ -27,18 +27,22 @@ My first step in the process was merging all 12 data files into 1 table so that 
 
 Using the `CREATE TABLE` and `UNION ALL` functions in SQL, I merged all 12 tables into 1, containing approximately 5.5 million rows. This table will remain untouched so to speak, and serve as my raw data file.
 
-From here I can start studying the data and look for any anomolies, duplicates, and/or missing values:
-#### 1. Checking for duplicates :heavy_check_mark:
+From here I can start studying the data and look for any anomolies, duplicates, and/or missing values: </br >
+
+**1. Checking for duplicates :heavy_check_mark:** </br >
+
 Since each individual ride has its own unique ID, there shouldn't be any duplicates. In SQL, I used `COUNT(DISTINCT(ride_id))` to return the total number of unique ride IDs, and then running `COUNT(ride_id)` I could see the overall total number of IDs. As both values were the same, I knew that each ride ID was unique and therefore, there were no duplicates 
 
 *The other variables may have contained duplicates however given the nature of their data this was not an issue and therefore they did not need to be checked.*
 
-#### 2. Checking for null values :heavy_check_mark:
+**2. Checking for null values :heavy_check_mark:** </br >
+
 Here I checked for any null/missing values: Using `COUNT(*)` and `WHERE ("column 1 name") IS NULL OR ("column 2 name") IS NULL etc.` I selected every column and returned a value based on the number of null values for each variable. The results showed that there were no null values except for the station names and id's (*over 1 million missing*). As I still had the complete start and end co-ordinates this wasn't much of a concern. 
 
 *I decided to exclude the station names and id's from the subsequent analysis, given the extent of null values. This would however need to be raised to stakeholders as there is clearly an issue with data collection for these variables.*
 
-#### 3. Checking for mistakes/anomalies :heavy_check_mark:
+**3. Checking for mistakes/anomalies :heavy_check_mark:** </br >
+
 Running `DISTINCT(rideable_type)` and `DISTINCT(member_casual)` as separate queries, returned the following: `classic_bike`, `electric_bike`, and `casual`, `member`. This verified that there were no extra, missing, or inncorrect values for these variables.
 
 I then looked at the length of the time related variables, to make sure they were all in the same format. I did this by using the `LEN` function, to return the range of characters present in each column. As each column only returned one value, I knew they were in the correct format. 
