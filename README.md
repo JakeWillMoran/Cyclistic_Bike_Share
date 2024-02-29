@@ -131,6 +131,4 @@ Total number of rides (Members)     |  Average ride time (Members)
 - Overall I believe we need more user specific data to be able to advertise effectively to the right audience.
 </br >
 
-Thank you for taking the time to read through my data analysis exercise.</br >
-
-`Jake`
+`Created by Jake Moran`
