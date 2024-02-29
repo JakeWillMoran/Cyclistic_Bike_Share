@@ -1,4 +1,5 @@
-# Cyclistic Bike Share
+# Cyclistic Bike Share <img align="right" width="140" height="140" src="https://github.com/JakeWillMoran/Cyclistic_Bike_Share/assets/161477623/ec6fe009-54b2-4959-b04d-390af383dc3a">
+
 ### <ins>About Cyclistic</ins>
 
 Cyclistic is a **bike-share program** based in **Chicago (US)** that features more than 5,800 bicycles and 600 docking stations. 
