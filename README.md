@@ -47,7 +47,7 @@ I then looked at the length of the time related variables, to make sure they wer
 As my data was now clean, I could transform the table into a format that would allow for a more efficient and effective analysis. I input the following query:
 
 ```sql
-CREATE TABLE "new_table_name" AS
+CREATE TABLE melodic-eye-414510.cyclistic_bike_share.cleaned_cyclistic_2023 AS
 
 SELECT 
 ride_id,
@@ -65,13 +65,13 @@ end_lat,
 end_lng,
 member_casual 
 
-FROM "table_name"
+FROM melodic-eye-414510.cyclistic_bike_share.merged_cyclistic_2023
 WHERE DATETIME_DIFF(ended_at, started_at, MINUTE)!=0 
   AND DATETIME_DIFF(ended_at, started_at, MINUTE)>0
 ```
 
 This created a new table that now included the additional following variables: `date`, `month`, `day_of_the_week`, and `ride_time`. <br />
-*The `WHERE`, `DATETIME_DIFF` and `OR` queries at the end excluded any rows in which the start and end timestamps were the same, or where the start time was greater than the end time (impossible and therefore invalid)*
+*The `WHERE` and `DATETIME_DIFF` queries at the end excluded any rows in which the start and end timestamps were the same, or where the start time was greater than the end time (impossible and therefore invalid)*
 
 # Results/findings
 \* *All visuals were produced using `Tableau`* \*
