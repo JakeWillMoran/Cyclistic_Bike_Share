@@ -129,6 +129,7 @@ Total number of rides (Members)     |  Average ride time (Members)
 - Alternatively, casual riders may not have thought to use Cyclistic bikes for commuting to and from work, or are unaware of the money they would save by becoming members (*dependant on an individual's bike use*). Evidently, from the member data we have observed, members appear to use the Cyclistic primarily for this purpose. We could therefore also advertsie the diverse uses of Cyclistic to casual riders along side the money they may save by using Cyclistic to commute to and from work.
 - Overall I believe we need more user specific data to be able to advertise effectively to the right audience.
 </br >
+
 Thank you for taking the time to read through my data analysis exercise.</br >
 
 `Jake`
