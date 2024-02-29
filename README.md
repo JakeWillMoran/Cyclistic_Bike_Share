@@ -21,7 +21,7 @@ Moreno has set a clear goal: Design marketing strategies aimed at **converting c
 
 Within each dataset we have the following variables: `ride_id` (*each individual ride has a unique ride ID*), the `rideable_type` used (*classic or electric bikes*), the `started_at` and `ended_at` timestamp of each ride, the start and end locations of each ride: `start_station_name`, `start_station_id`, `end_station_name`, `end_station_id`, `start_lat`, `start_lng`, `end_lat`, `end_lng`, and the associated type of user: `member_casual`.
 
-## <ins>Cleaning the data</ins>
+## Cleaning the data
 
 My first step in the process was merging all 12 data files into 1 table so that I could begin cleaning the data; I decided to use `SQL` (*Bigquery*) at this stage. 
 
@@ -47,7 +47,7 @@ Running `DISTINCT(rideable_type)` and `DISTINCT(member_casual)` as separate quer
 
 I then looked at the length of the time related variables, to make sure they were all in the same format. I did this by using the `LEN` function, to return the range of characters present in each column. As each column only returned one value, I knew they were in the correct format. 
 
-## <ins>Transforming the data</ins>
+## Transforming the data
 As my data was now clean, I could transform the table into a format that would allow for a more efficient and effective analysis. I input the following query:
 
 ```sql
@@ -79,7 +79,6 @@ This created a new table that now included the additional following variables: `
 
 # Results/findings
 \* *All visuals were produced using `Tableau`* \*
-## General results
 - **Members took significantly more rides than casual users in 2023 whereas on average, casual riders had significantly longer ride times compared to members.** <br />
 
 Total number of rides      |  Average ride time
@@ -118,7 +117,7 @@ Total number of rides (Members)     |  Average ride time (Members)
 <img width="500" height="600" src="https://github.com/JakeWillMoran/Cyclistic_Bike_Share/assets/161477623/870707df-da28-4723-9522-4a0f68e668b7">
 </p>
 
-# Discusion 
+# Discussion 
 - As casual riders consist of only 30% of Cyclistic users, this first result is to be expected. Interestingly, despite not using Cyclistic as often, it appears that casual riders are overall spending more time using Cyclistic bikes. One hypothesis is that casual riders are using Cyclistic bikes more for leisure and are therefore spending more time on the bikes. On the other hand, members may be using Cyclistic bikes more often for work and therefore their journeys are more rushed and are less likely to vary. Casual riders having a steeper incline in average ride time into the summer months further supports this hypothesis that casual riders are using Cyclistic bikes for more leisurely purposes. Furthermore, the increase in member activity in the working week supports this, on top of the fact their bike usage is peaking around common working commute times (8am and 5pm). The hourly average ride times amongst both groups suggests that both groups on average are riding for the longest time early in the morning. This will need to be explored in future analyses.
 - It appears that both groups opt in for using electric bikes more often and spend more time on average riding classic bikes, however casual users appear to spend on average a *significantly* longer time on classic bikes. This may be due to the typical use of the bikes: electric bikes are often used for assistance rather than leisure, meaning the users may spend less time on average using them. Regardless of the reason of use, casual riders spend longer times on average riding classic bikes, further supporting the hypothesis that they lean towards using Cyclistic bikes for leisure. The peaks in usage that we observe for casual riders numbers of rides at 8am and 5pm may further suggest that electric bikes are typically used for commuting to and from work, even amongst casual users.
 - The geographical analysis shows us that casual riders and members don't appear to have a clear preference for where they collect and drop off the Cyclistic bikes.
