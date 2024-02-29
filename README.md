@@ -47,7 +47,7 @@ I then looked at the length of the time related variables, to make sure they wer
 As my data was now clean, I could transform the table into a format that would allow for a more efficient and effective analysis. I input the following query:
 
 ```sql
-CREATE TABLE melodic-eye-414510.cyclistic_bike_share.cleaned_cyclistic_2023 AS
+CREATE TABLE "new_table_name" AS
 
 SELECT 
 ride_id,
@@ -65,7 +65,7 @@ end_lat,
 end_lng,
 member_casual 
 
-FROM melodic-eye-414510.cyclistic_bike_share.merged_cyclistic_2023
+FROM "table_name"
 WHERE DATETIME_DIFF(ended_at, started_at, MINUTE)!=0 
   AND DATETIME_DIFF(ended_at, started_at, MINUTE)>0
 ```
