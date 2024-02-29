@@ -12,9 +12,9 @@ Moreno has set a clear goal: Design marketing strategies aimed at **converting c
 
 \* *Cyclistic Bike Share is a fictional company, and all associated data has been produced by Google, through the [Google Data Analytics Professional Certificate](https://www.coursera.org/professional-certificates/google-data-analytics). The use of this data and subsequent analysis is to serve as an exercise for data analysis. <ins>Moreover, the purpose of this project isn't to display perfect analysis, but to highlight my analytical and technical skills.</ins>* \* 
 
-### The Task 
-**1. How do annual members and casual riders use Cyclistic bikes differently?**
-**2. Why would casual riders buy Cyclistic annual memberships?**
+### <ins>The Task </ins>
+**1. How do annual members and casual riders use Cyclistic bikes differently?** </br >
+**2. Why would casual riders buy Cyclistic annual memberships?** </br >
 **3. How can Cyclistic use digital media to influence casual riders to become members?**
 
 # Preparation
