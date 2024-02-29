@@ -9,7 +9,7 @@ Cyclistic’s finance analysts have concluded that **annual members are much mor
 
 Moreno has set a clear goal: Design marketing strategies aimed at **converting casual riders into annual members**. In order to do that, however, the team needs to better understand how annual members and casual riders differ, why casual riders would buy a membership, and how digital media could affect their marketing tactics. Moreno and her team are interested in analyzing the Cyclistic historical bike trip data to identify trends.
 
-\* *Cyclistic Bike Share is a fictional company, and all associated data has been produced by Google, through the [Google Data Analytics Professional Certificate](https://www.coursera.org/professional-certificates/google-data-analytics). The use of this data and subsequent analysis is to serve as an exercise for data analysis. <ins>Moreover, the purpose of this project isn't to display perfect analysis, but to highlight my analytical and technical skills, and my logical way of thinking</ins>* \* 
+\* *Cyclistic Bike Share is a fictional company, and all associated data has been produced by Google, through the [Google Data Analytics Professional Certificate](https://www.coursera.org/professional-certificates/google-data-analytics). The use of this data and subsequent analysis is to serve as an exercise for data analysis. <ins>Moreover, the purpose of this project isn't to display perfect analysis, but to highlight my analytical and technical skills.</ins>* \* 
 
 # The Task 
 #### 1. How do annual members and casual riders use Cyclistic bikes differently?
@@ -113,7 +113,7 @@ Total number of rides (Members)     |  Average ride time (Members)
 - The geographical analysis shows us that casual riders and members don't appear to have a clear preference for where they collect and drop off the Cyclistic bikes.
 
 ### Limitations
-- We did not have user specific data: user demographics would allow us to gain insights into the types of people who are using Cyclistic casually or as annual members. For isntance, we could compare age and employment types between the groups.
+- We did not have user specific data: user demographics would allow us to gain insights into the types of people who are using Cyclistic casually or as annual members. For instance, we could compare age and employment types between the groups.
 - Given the imbalance between total numbers of members and casual riders, the total number of rides of 2023 may be misleading as there are simply a lot more members than casual riders: it doesn't necessarily support the idea that if someone is a member, they are more likely to use Cyclistic more frequently. It is simply showing overall figures.  
 - The geographical analysis is limited as it only observes the locations in which the users collect and return their bikes: the docking stations. We therefore do not have data on their journey: where specifically they are spending most of their time on the bikes. This information would give us insights into how both groups use the bikes differently. Moreover, given the missing data for the start and end stations, we could not perform an analysis on this, as it wouldn't accurately reflect the whole population of users. With this data we could've uncovered which stations (instead of general areas in Chicago) both groups tend to use the most (the mode). This information would prove beneficial in the marketing strategies.
 
